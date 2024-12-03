@@ -157,7 +157,7 @@ aside {
     justify-content: center;
     align-content: space-between;
     border-radius: 0;
-    max-width: 450px;
+    max-width: 400px;
 }
 
 .slider {
@@ -255,6 +255,7 @@ form {
     flex-wrap: wrap;
     justify-content: flex-start;
     padding: 5px;
+    flex-basis: 100%;
 }
 
 div.animacio {
