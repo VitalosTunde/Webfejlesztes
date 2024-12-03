@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vitálos Tünde Eszter">
+    <meta name="description" content="Szarkaláb polgári társulás oldala">
+    <meta name="copyright" content="Szarkaláb polgári társulás">
+    <link rel="icon" type="image/x-icon" href="kepek/favicon/madar.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilus.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+    <script src="jquery-3.7.1.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#urlap").validate({
+                rules: {
+                    veznev: "required",
+                    kereszt: "required",
+                    neme: "required",
+                    szul: "required",
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                    velemeny: "required",
+                },
+                messages: {
+                    veznev: "<br> Írd be a vezetékneved!",
+                    kereszt: "<br> Írd be a keresztneved!",
+                    neme: "<br> Kérlek válaszd ki a nemed!",
+                    szul: "<br>Add meg a születési dátumodat!",
+                    email: "<br>Kérlek valós email címet adj meg!",
+                    velemeny: "<br>Kérlek fejtsd ki a véleményed!",
+                },
+            });
+        });
+    </script>
+    <style>
+        label.error {
+        color: #b6004c;
+        };
+    </style>
+    <title>Szarkaláb</title>
+</head>
+<body>
+    <header>
+        <h1><img class="logo" src="kepek/logo/logo.png" alt="szarkaláb polgári társulás logo">Szarkaláb polgári társulás</h1>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="szolgaltatasaink.html">Szolgáltatásaink</a></li>
+                <li><a href="sajat.html">Rendezvényeink</a></li>
+                <li><a href="galeria.html">Galéria</a></li>
+                <li><a class="active" href="#">Vélemények</a></li>
+            </ul>
+        </nav>
+        <article><h2>Mondja el véleményét!</h2></article>
+        <aside>
+            <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="urlap" novalidate>
+                <label for="veznev">Vezetéknév: <input type="text" size="20" name="veznev" id="veznev" placeholder="pl.: Nagy"></label>
+                <label for="kereszt">Keresztnév: <input type="text" size="20" name="kereszt" id="kereszt" placeholder="pl.: Imre"></label><br>
+                Neme: <label for="no"><input type="radio" name="neme" id="no" value="no"> Nő </label><label for="ferfi"><input type="radio" name="neme" id="ferfi" value="ferfi"> Férfi </label><br>
+                <label for="szul">Adja meg a születési dátumát! <input type="date" name="szul" id="szul"></label><br>
+                <label for="email"> E-mail címe: <input type="email" size="30" name="email" id="email" placeholder="pl.: nagy.imre@gmail.com"></label><br> 
+                Mely szolgáltatásainkkal találkozott?
+                <label for="ijaszat"><input type="checkbox" name="ijaszat" id="ijaszat" value="on"> Íjászoktatás</label>
+                <label for="bemutat"><input type="checkbox" name="bemutató" od="bemutat" value="on"> Íjászbemutató</label>
+                <label for="vivas"><input type="checkbox" name="vívás" id="vivas" value="on"> Vívás</label>
+                <label for="fajatek"><input type="checkbox" name="fajátékok" id="fajatek" value="on"> Fajátékok</label><br>
+                <label for="elegedett">Mennyire elégedett a szolgáltatásainkkal?<br> Egy kicsit sem <input type="range" name="elegedettseg" id="elegedett" min="1" max="10" step ="1" value ="10" > Teljes mértékben </label> <br>
+                <label for="velemeny">Itt kifejtheti véleményét: <br><textarea name="velemeny" id="velemeny" rows="10" cols="50"></textarea><br></label>
+                <label for="vissza">Szeretne visszajelzést kapni az észrevételeivel kapcsolatban? <br>
+                    <select name="visszajelzes" id="vissza">
+                        <option value="igen">Igen</option>
+                        <option value="nem">Nem</option>
+                    </select></label><br>
+                <input type="submit" value="Elküldés">
+                <input type="reset" value="Alaphelyzet"><br>
+             </form>
+             <p>Köszönjük, hogy véleményével hozzájárult cégünk további fejlődéséhez!</p>
+        </aside>
+    </div>
+    <footer class="labjegyzet">
+        <div id="vaszon" class="animacio">
+            <img class="balalso" src="kepek/animacio/ij.png">
+            <img class="jobbalso" src="kepek/animacio/cel.png">
+            <img id="nyilvesszo" class="vesszo" src="kepek/animacio/nyil.png">
+        </div>
+        <a href="kapcsolat.html">Vedd fel velünk a kapcsolatot!</a>
+        <div class="kapcsolat">
+            <p> E-mail: vivoiskola@gmail.com &nbsp; </p>
+            <p> &nbsp; Tel.: +421 918 253 271 </p>
+        </div>
+        <p class="copyright">© Szarkaláb polgári társulás 2024</p>
+    </footer>
+    <footer>Ez az oldal pusztán gyakorlásra szolgál</footer>
+    <script src="script.js"></script>
+    </body>
+    
+    </html>
