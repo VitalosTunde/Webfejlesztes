@@ -4,6 +4,7 @@ A webfejlesztés tárgy beadandója
 Készítette: Vitálos Tünde Eszter
 
 Az oldal címe: https://vitalostunde.github.io/webfejlesztes/
+
 A GitHub repository  oldala: https://github.com/VitalosTunde/webfejlesztes
 
 A weboldalról: a weboldalt megtörtént események ihlették, hiszen a családommal gyakran járunk/szervezünk a témához kapcsolódó programokra/programokat. Elképzelhető, hogy a jövőben még hasznát is tudom venni némi átalakítással, ezért választottam ezt a témát.
