@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css">
     <title>Szarkaláb</title>
 </head>
 
@@ -33,7 +35,20 @@
         </article>
         <div class="szolg">
             <aside class="kep">
-                <img src="kepek/ijaszat/1.jpg" alt="Íjászat">
+                <section class="responsive center slider">
+                    <div><img src="kepek/ijaszat/1.jpg" alt="Íjásztatás"></div>
+                    <div><img src="kepek/ijaszat/2.jpg" alt="Íjásztatás"></div>
+                    <div><img src="kepek/ijaszat/3.jpg" alt="Íjásztatás"></div>
+                    <div><img src="kepek/ijaszat/4.jpg" alt="Íjásztatás"></div>
+                    <div><img src="kepek/ijaszat/5.jpg" alt="Íjásztatás"></div>
+                    <div><img src="kepek/ijaszat/6.jpg" alt="Íjásztatás"></div>
+                    <div><img src="kepek/ijaszat/7.jpg" alt="Íjásztatás"></div>
+                    <div><img src="kepek/ijaszat/8.jpg" alt="Íjásztatás"></div>
+                    <div><img src="kepek/ijaszat/9.jpg" alt="Íjásztatás"></div>
+                    <div><img src="kepek/ijaszat/10.jpg" alt="Íjásztatás"></div>
+                    <div><img src="kepek/ijaszat/11.jpg" alt="Íjásztatás"></div>
+                    <div><img src="kepek/ijaszat/12.jpg" alt="Íjásztatás"></div>
+                </section>
                 <aside class="gomb">
                     <a href="galeria.html">Galéria</a>
                 </aside>
@@ -60,6 +75,40 @@
         <p class="copyright">© Szarkaláb polgári társulás 2024</p>
     </footer>
     <footer>Ez az oldal pusztán gyakorlásra szolgál</footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript">
+    </script>
+    <script src="slick-1.8.1/slick/slick.js" type="text/javascript" charset="utf-8">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.responsive').slick({
+                dots: false,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                infinite: true,
+                speed: 1500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            autoplaySpeed: 1500,
+                            speed: 2500,
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

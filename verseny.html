@@ -36,12 +36,18 @@
         <div class="szolg">
             <aside class="kep">
                 <section class="responsive center slider">
-                    <div><img class="foto" src="kepek/verseny/1.jpg" alt="Íjászverseny"></div>
-                    <div><img class="foto" src="kepek/verseny/2.jpg" alt="Íjászverseny"></div>
-                    <div><img class="foto" src="kepek/verseny/3.jpg" alt="Íjászverseny"></div>
-                    <div><img class="foto" src="kepek/verseny/4.jpg" alt="Íjászverseny"></div>
-                    <div><img class="foto" src="kepek/verseny/5.jpg" alt="Íjászverseny"></div>
-                    <div><img class="foto" src="kepek/verseny/6.jpg" alt="Íjászverseny"></div>
+                    <div><img src="kepek/verseny/1.jpg" alt="Íjászverseny"></div>
+                    <div><img src="kepek/verseny/2.jpg" alt="Íjászverseny"></div>
+                    <div><img src="kepek/verseny/3.jpg" alt="Íjászverseny"></div>
+                    <div><img src="kepek/verseny/4.jpg" alt="Íjászverseny"></div>
+                    <div><img src="kepek/verseny/5.jpg" alt="Íjászverseny"></div>
+                    <div><img src="kepek/verseny/6.jpg" alt="Íjászverseny"></div>
+                    <div><img src="kepek/verseny/7.jpg" alt="Íjászverseny"></div>
+                    <div><img src="kepek/verseny/8.jpg" alt="Íjászverseny"></div>
+                    <div><img src="kepek/verseny/9.jpg" alt="Íjászverseny"></div>
+                    <div><img src="kepek/verseny/10.jpg" alt="Íjászverseny"></div>
+                    <div><img src="kepek/verseny/11.jpg" alt="Íjászverseny"></div>
+                    <div><img src="kepek/verseny/12.jpg" alt="Íjászverseny"></div>
                 </section>
                 <aside class="gomb">
                     <a href="galeria.html">Galéria</a>
@@ -76,9 +82,12 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('.responsive').slick({
-                dots: true,
-                infinite: false,
-                speed: 300,
+                dots: false,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                infinite: true,
+                speed: 1500,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 responsive: [
@@ -86,16 +95,14 @@
                         breakpoint: 768,
                         settings: {
                             slidesToShow: 1,
-                            slidesToScroll: 1,
-                            infinite: true,
-                            dots: true,
                         }
                     },
                     {
                         breakpoint: 600,
                         settings: {
                             slidesToShow: 2,
-                            slidesToScroll: 1,
+                            autoplaySpeed: 1500,
+                            speed: 2500,
                         }
                     }
                 ]

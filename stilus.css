@@ -157,16 +157,11 @@ aside {
     justify-content: center;
     align-content: space-between;
     border-radius: 0;
-    width:100%;
     max-width: 450px;
 }
 
 .slider {
     width: 85%;
-}
-
-.foto {
-
 }
 
 .szoveg {
